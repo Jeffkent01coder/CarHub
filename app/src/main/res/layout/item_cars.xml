@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="isCarList"
+            type="com.jeff.carhub.model.CarData" />
+    </data>
+    
+<androidx.cardview.widget.CardView
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    card_view:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/carImg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{isCarList.carName}"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/carName"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{isCarList.carDesc}"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:id="@+id/carCal"
+                android:textColor="@android:color/darker_gray"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>
